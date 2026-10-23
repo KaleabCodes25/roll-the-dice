@@ -30,18 +30,18 @@ public class Dice {
             }
 
         }
-        display(twoCounter);
-        display(fourCounter);
-        display(sixCounter);
-        display(sevenCounter);
+        display("The number of sums equals to two is: " ,twoCounter);
+        display("The number of sums equals to four is: ", fourCounter);
+        display("the number of sums equals to six is: ", sixCounter);
+        display("The number of sums euquals to seven is: ", sevenCounter);
     }
 
     public static int roll(){
         int radomNumber = (int)(Math.random() * (6)) + 1;
         return radomNumber;
     }
-    public static void display(int counter){
-        System.out.println(counter);
+    public static void display(String name, int counter){
+        System.out.println(name + counter);
     }
 
 }
