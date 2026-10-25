@@ -19,16 +19,12 @@ public class Dice {
             roll2 = dice.roll();
             int sum = roll1 + roll2;
             System.out.printf("Roll %d: %d - %d Sum: %d%n", i + 1, roll1, roll2, sum);
-            if (sum == 2) {
-                twoCounter += 1;
-            } else if (sum == 4) {
-                fourCounter += 1;
-            } else if (sum == 6) {
-                sixCounter += 1;
-            } else if (sum == 7) {
-                sevenCounter += 1;
+            switch (sum){
+                case 2 -> twoCounter+=1;
+                case 4 -> fourCounter+=1;
+                case 6 -> sixCounter+=1;
+                case 7 -> sevenCounter+=1;
             }
-
         }
         display("The number of sums equals to two is: " ,twoCounter);
         display("The number of sums equals to four is: ", fourCounter);
@@ -37,10 +33,10 @@ public class Dice {
     }
 
     public static int roll(){
-        int radomNumber = (int)(Math.random() * (6)) + 1;
-        return radomNumber;
+        int radoNumber = (int)(Math.random() * (6-1+1)) + 1;
+        return radoNumber;
     }
-    public static void display(String name, int counter){
+    public static void display(String name, int counter) {
         System.out.println(name + counter);
     }
 
